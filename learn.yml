@@ -1,0 +1,37 @@
+# Hey This is  a YAML
+my-course: "AWS Devops Certification" # can write without quotation
+version: 1.0
+price: 299
+is_public: true
+release_date: 2022-01-10 #default format yy-mm-dd
+pre_enroll: null
+category: 
+ - AWS
+ - Devops
+ - AWS Certification
+
+course_dev: ["murthy", "Hema","Preeti"]  # previous and  this both are correct
+dev_details:
+ - name: "murthy"
+   email: "support@learning.in"
+   role: "Co-author"
+ - name: "Hema"
+   email: "support@learning.in"
+   role: "Co-author"
+ - name: "Preeti"
+   email: "support@learning.in"
+   role: "Ediotr"
+ - {name: "Aman", email: "support@learning.in", role: "Finance"}
+
+# for multiline string
+short_description: > 
+ This is a course for
+ AWS Devops Professional
+ Certification
+
+# for multiline string -retain next line character
+detailed_description: |
+ This course has been
+ created with the collaboration 
+ with industry experts.
+ We hope you like it.
