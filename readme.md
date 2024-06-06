@@ -1,7 +1,7 @@
 # What is YAML?
 -YAML, which stands for "YAML Ain't Markup Language", is a human-readable data serialization standard that can be used in conjunction with all programming languages and is often used to write configuration files.Here's a brief overview of YAML:
 
-1. Human-Readable: YAML's syntax is designed to be  easy for humans to read and write. It uses indentation to denote structure, which makes the data representation clear and concise.
+** 1. Human-Readable:** YAML's syntax is designed to be  easy for humans to read and write. It uses indentation to denote structure, which makes the data representation clear and concise.
 
 2. Data Serialization: YAML is used to serialize data, meaning it converts data structures or objects into a format that can be stored and reconstructed later.
 
