@@ -1,0 +1,63 @@
+# General Settings
+project_name: "Image Classification System"
+version: 1.0
+description: >
+  This configuration file is for an image classification system
+  using a convolutional neural network (CNN) model.
+
+# Dataset Settings
+dataset:
+  name: "CIFAR-10"
+  path: "/datasets/cifar10"
+  split:
+    train: 80  # Percentage of data used for training
+    validation: 10  # Percentage of data used for validation
+    test: 10  # Percentage of data used for testing
+  image_size: [32, 32]  # Resize all images to 32x32 pixels
+  classes: 10  # Number of classes in the dataset
+
+# Model Settings
+model:
+  name: "ResNet50"
+  pretrained: true  # Use a pretrained model
+  input_shape: [32, 32, 3]  # Image dimensions: width, height, channels
+  output_classes: 10  # Number of output classes
+
+# Training Settings
+training:
+  batch_size: 32
+  epochs: 50
+  learning_rate: 0.001
+  optimizer: "adam"  # Options: "adam", "sgd", "rmsprop"
+  loss_function: "categorical_crossentropy"
+  augmentations:
+    - "flip_horizontal"
+    - "rotation"
+    - "zoom"
+
+# Logging and Monitoring
+logging:
+  log_dir: "/logs/image_classification"
+  log_frequency: 10  # Log metrics every 10 steps
+  save_checkpoints: true  # Save model checkpoints
+  checkpoint_dir: "/checkpoints"
+
+# Deployment Settings
+deployment:
+  export_path: "/models/exported_model"
+  input_format: "image/jpeg"
+  output_format: "JSON"
+  api:
+    endpoint: "/predict"
+    host: "0.0.0.0"
+    port: 8080
+
+# Team Info
+team:
+  developers:
+    - name: "Hema"
+      email: "hema@example.com"
+      role: "Lead Developer"
+    - name: "Aman"
+      email: "aman@example.com"
+      role: "Data Scientist"
